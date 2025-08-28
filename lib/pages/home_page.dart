@@ -8,12 +8,10 @@ class HomePage extends StatelessWidget {
     var hello = 'prabhat';
     return Scaffold(
       appBar: AppBar(
-        title:  Text("My App"),
+        title: Text("My App"),
         backgroundColor: Colors.red, // 🔴 AppBar color set to red
       ),
-      body: Center(
-        child: Text("Hello, $hello my kahshfdkh is this is my name "),
-      ),
+      body: Center(child: Text("Hello,$hello sdasf")),
       drawer: Drawer(
         child: ListView(
           children: const [
