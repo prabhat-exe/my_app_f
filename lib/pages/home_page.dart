@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         title: Text("My App"),
         backgroundColor: Colors.red, // 🔴 AppBar color set to red
       ),
-      body: Center(child: Text("Hello,$hello sdasf")),
+      body: Center(child: Text("Hello,$hello  ")),
       drawer: Drawer(
         child: ListView(
           children: const [
