@@ -7,17 +7,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var hello = 'prabhat';
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My App"),
-        backgroundColor: Colors.red, // 🔴 AppBar color set to red
-      ),
+      appBar: AppBar(title: Text("My App"), backgroundColor: Colors.purple),
       body: Center(child: Text("Hello,$hello  ")),
       drawer: Drawer(
         child: ListView(
           children: const [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.purple,
               ), // optional background
               child: Text(
                 "Menu",
