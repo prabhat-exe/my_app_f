@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fprojects/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,21 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("My App"), backgroundColor: Colors.purple),
       body: Center(child: Text("Hello,$hello  ")),
-      drawer: Drawer(
-        child: ListView(
-          children: const [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.purple,
-              ), // optional background
-              child: Text(
-                "Menu",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-            ),
-          ],
-        ),
-      ),
+      drawer: My_Drawer(),
     );
   }
 }
