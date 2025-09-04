@@ -1,0 +1,26 @@
+class Item {
+  final String id;
+  final String name;
+  final num price;
+  final String description;
+  final String image;
+
+  Item({
+    required this.id,
+    required this.name,
+    required this.price,
+    required this.description,
+    required this.image,
+  });
+}
+
+final products = [
+  Item(
+    id: "1",
+    name: "Iphone 12",
+    price: 999,
+    description:
+        "Apple iPhone 12 with A14 Bionic chip, 5G speed, and advanced dual-camera system.",
+    image: "https://example.com/iphone12.jpg",
+  ),
+];

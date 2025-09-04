@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: "Enter UserName",
+                        hintText: "example@yahoo.com",
                         labelText: "Username",
                       ),
                       keyboardType: TextInputType.emailAddress,
@@ -64,7 +64,13 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return "username cannot be empty";
+                          return "Email cannot be empty";
+                        }
+                        // simple email regex check
+                        if (!RegExp(
+                          r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+                        ).hasMatch(value)) {
+                          return "Please enter a valid email";
                         }
                         return null;
                       },
