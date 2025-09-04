@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var hello = 'prabhat';
     return Scaffold(
-      appBar: AppBar(title: Text("My App"), backgroundColor: Colors.purple),
+      appBar: AppBar(title: Text("My App")),
       body: Center(child: Text("Hello,$hello  ")),
       drawer: My_Drawer(),
     );
