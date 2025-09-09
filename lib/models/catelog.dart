@@ -1,5 +1,18 @@
+class CatelogModel {
+  static final items = [
+    Item(
+      id: 1,
+      name: "Iphone 12",
+      price: 999,
+      description:
+          "Apple iPhone 12 with A14 Bionic chip, 5G speed, and advanced dual-camera system.",
+      image: "https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg",
+    ),
+  ];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final num price;
   final String description;
@@ -13,14 +26,3 @@ class Item {
     required this.image,
   });
 }
-
-final products = [
-  Item(
-    id: "1",
-    name: "Iphone 12",
-    price: 999,
-    description:
-        "Apple iPhone 12 with A14 Bionic chip, 5G speed, and advanced dual-camera system.",
-    image: "https://example.com/iphone12.jpg",
-  ),
-];
