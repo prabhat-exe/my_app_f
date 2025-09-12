@@ -1,4 +1,5 @@
-[
+{
+  "products":[
   {
     "id": 1,
     "name": "Wireless Headphones",
@@ -70,3 +71,4 @@
     "image": "https://picsum.photos/seed/powerbank/400/300"
   }
 ]
+}
