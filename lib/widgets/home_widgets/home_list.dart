@@ -14,7 +14,7 @@ class CatelogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatelogModel.items.count(),
       itemBuilder: (context, index) {
-        final catalog = CatelogModel.items[index];
+        final catalog = CatelogModel.getByPosition(index);
         return InkWell(
           onTap: () => Navigator.push(
             context,
@@ -50,10 +50,12 @@ class CatelogItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.bold
-                    .color(Mythemes.darkBluishColor)
+                catalog.name.text.lg.bold.color(Mythemes.creamColor).make(),
+                catalog.description.text
+                    .textStyle(context.captionStyle)
+                    .color(Mythemes.creamColor)
                     .make(),
-                catalog.description.text.textStyle(context.captionStyle).make(),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -62,12 +64,7 @@ class CatelogItem extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 16),
                       child: ElevatedButton(
                         onPressed: () {},
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                            Mythemes.darkBluishColor,
-                          ),
-                        ),
-                        child: "Buy".text.color(Colors.white).make(),
+                        child: const Text("Add to cart"),
                       ),
                     ),
                   ],
@@ -77,6 +74,6 @@ class CatelogItem extends StatelessWidget {
           ),
         ],
       ),
-    ).white.roundedLg.square(150).make().py16();
+    ).color(context.cardColor).roundedLg.square(150).make().py16();
   }
 }

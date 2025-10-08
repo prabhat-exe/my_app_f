@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:fprojects/utils/routes.dart';
+import 'package:fprojects/widgets/themes.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -32,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: Mythemes.darkBluishColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,

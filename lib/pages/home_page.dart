@@ -1,14 +1,15 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fprojects/utils/routes.dart';
 import 'package:fprojects/widgets/home_widgets/home_header.dart';
 import 'package:fprojects/widgets/home_widgets/home_list.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:fprojects/models/catelog.dart';
-import 'package:fprojects/widgets/themes.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,7 +43,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final dummyList = List.generate(4, (index) => CatelogModel.items[0]);
     return Scaffold(
-      backgroundColor: Mythemes.creamColor,
+      backgroundColor: context.cardColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.cartRoute);
+        },
+        child: const Icon(CupertinoIcons.cart),
+      ),
+
       body: SafeArea(
         child: Container(
           padding: Vx.m16,
@@ -61,4 +69,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
